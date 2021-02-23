@@ -3,4 +3,5 @@ export default interface STICK_TYPE {
   startColor: string;
   endColor: string;
   delay: number;
+  points: number;
 }
