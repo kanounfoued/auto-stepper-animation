@@ -1,4 +1,4 @@
-export default interface CIRCLE_TYPE {
+export default interface PIECE_COMPONENT_TYPE {
   type: string;
   startColor: string;
   endColor: string;
