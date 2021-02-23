@@ -1,8 +1,4 @@
-export interface STATE_TYPE {
-  status: string;
-  points: number;
-}
-
+import STATE_TYPE from '../declaration_types/State';
 export const states: Array<STATE_TYPE> = [
   { status: 'qualified', points: 10 },
   { status: 'followUp', points: 20 },
