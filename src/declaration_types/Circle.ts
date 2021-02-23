@@ -5,4 +5,5 @@ export default interface CIRCLE_TYPE {
   startColor: string;
   endColor: string;
   delay: number;
+  points: number;
 }
