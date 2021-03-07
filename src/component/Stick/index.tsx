@@ -2,7 +2,7 @@ import React, { useState, useEffect, FC } from 'react';
 import STICK_TYPE from '../../declaration_types/Stick';
 import { StyledStick, AnimatedStick } from './style';
 
-interface IPropTypes {
+export interface IPropTypes {
   stick: STICK_TYPE;
   active: boolean;
   style?: {
@@ -21,7 +21,13 @@ const Stick: FC<IPropTypes> = (props) => {
 
   return (
     <StyledStick style={style}>
-      <AnimatedStick startColor={stick.startColor} endColor={stick.endColor} isActive={isActive} delay={stick.delay} />
+      <AnimatedStick
+        startColor={stick.startColor}
+        endColor={stick.endColor}
+        isActive={isActive}
+        delay={stick.delay}
+        data-testid={stick.id}
+      />
     </StyledStick>
   );
 };
