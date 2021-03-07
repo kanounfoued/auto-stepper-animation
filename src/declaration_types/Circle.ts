@@ -1,4 +1,5 @@
 export default interface CIRCLE_TYPE {
+  id: string;
   type: string;
   startColor: string;
   endColor: string;
