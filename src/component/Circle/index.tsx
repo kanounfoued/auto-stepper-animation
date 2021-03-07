@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react';
 import CIRCLE_TYPE from '../../declaration_types/Circle';
 import { CircleContainer, StyledCircle, AnimatedCircle } from './style';
 
-interface IPropTypes {
+export interface IPropTypes {
   circle: CIRCLE_TYPE;
   active: boolean;
 }
@@ -23,8 +23,9 @@ const Circle: FC<IPropTypes> = (props) => {
           startColor={circle.startColor}
           endColor={circle.endColor}
           isActive={isActive}
+          data-testid={circle.id}
         />
-        <span>{circle.title}</span>
+        <label aria-label={circle.title}>{circle.title}</label>
       </StyledCircle>
     </CircleContainer>
   );
