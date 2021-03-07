@@ -12,7 +12,7 @@ export const StyledCircle = styled.div`
   border-radius: 50%;
   position: relative;
 
-  & span {
+  & label {
     position: absolute;
     left: -72%;
     top: 40px;
