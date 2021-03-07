@@ -2,6 +2,7 @@ import PIECE_COMPONENT_TYPE from '../../declaration_types/PieceComponent';
 
 export const mockData: PIECE_COMPONENT_TYPE[] = [
   {
+    id: 'circle-1',
     type: 'circle',
     title: 'Qualifié',
     icon: '',
@@ -11,6 +12,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 0,
   },
   {
+    id: 'stick-1',
     type: 'stick',
     startColor: '#67e0d7',
     endColor: '#7fd2fd',
@@ -18,6 +20,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 0.2,
   },
   {
+    id: 'circle-2',
     type: 'circle',
     title: 'Contacté',
     icon: '',
@@ -27,6 +30,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 0.4,
   },
   {
+    id: 'stick-2',
     type: 'stick',
     startColor: '#7fd2fd',
     endColor: '#49b2e7',
@@ -34,6 +38,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 0.6,
   },
   {
+    id: 'circle-3',
     type: 'circle',
     title: 'Présentation effectuée',
     icon: '',
@@ -43,6 +48,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 0.8,
   },
   {
+    id: 'stick-3',
     type: 'stick',
     startColor: '#49b2e7',
     endColor: '#ed7348',
@@ -50,6 +56,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 1,
   },
   {
+    id: 'circle-3',
     type: 'circle',
     title: 'Devis envoyé',
     icon: '',
