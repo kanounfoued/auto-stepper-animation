@@ -5,7 +5,7 @@ import STATE_TYPE from '../../declaration_types/State';
 import { InitialStepContainer } from './style';
 import { mockData } from './mock';
 
-interface IPropTypes {
+export interface IPropTypes {
   state: STATE_TYPE;
 }
 
@@ -13,7 +13,7 @@ const InitialSteps: FC<IPropTypes> = (props) => {
   const { state } = props;
 
   return (
-    <InitialStepContainer>
+    <InitialStepContainer data-testid="initial-step-container">
       {mockData.map((shape, index) => {
         let startColor = shape.startColor;
         let endColor = shape.endColor;
