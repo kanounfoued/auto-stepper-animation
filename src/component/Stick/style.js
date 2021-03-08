@@ -6,6 +6,7 @@ export const StyledStick = styled.div`
   width: ${(props) => (props.style.width ? props.style.width : 50)}px;
   background-color: #b2bec3;
   position: relative;
+  z-index: ${(props) => (props.isActive ? 1 : 0)};
 `;
 
 export const AnimatedStick = styled.div`
