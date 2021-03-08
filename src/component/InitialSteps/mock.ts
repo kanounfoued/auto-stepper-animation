@@ -56,7 +56,7 @@ export const mockData: PIECE_COMPONENT_TYPE[] = [
     delay: 1,
   },
   {
-    id: 'circle-3',
+    id: 'circle-4',
     type: 'circle',
     title: 'Devis envoyé',
     icon: '',
