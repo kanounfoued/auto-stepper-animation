@@ -15,15 +15,19 @@ export interface IPropTypes {
 const Direction: FC<IPropTypes> = (props) => {
   const { state } = props;
 
-  const [isSuccess, setSuccess] = useState<boolean>(false);
-  const [isProblem, setProblem] = useState<boolean>(false);
-  const [isLost, setLost] = useState<boolean>(false);
+  // const [isSuccess, setSuccess] = useState<boolean>(false);
+  // const [isProblem, setProblem] = useState<boolean>(false);
+  // const [isLost, setLost] = useState<boolean>(false);
 
-  useEffect(() => {
-    setSuccess(SUCCESS_STATUS.includes(state.status));
-    setProblem(state.status === 'problem');
-    setLost(state.status === 'lost');
-  }, [state.status]);
+  const isSuccess: boolean = SUCCESS_STATUS.includes(state.status);
+  const isProblem: boolean = state.status === 'problem';
+  const isLost: boolean = state.status === 'lost';
+
+  // useEffect(() => {
+  // setSuccess(SUCCESS_STATUS.includes(state.status));
+  // setProblem(state.status === 'problem');
+  // setLost(state.status === 'lost');
+  // }, [state]);
 
   return (
     <DirectionContainer data-testid="direction-container">
