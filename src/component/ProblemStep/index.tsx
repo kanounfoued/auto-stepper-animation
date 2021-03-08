@@ -11,7 +11,7 @@ export interface IPropTypes {
 }
 
 const ProblemStep: FC<IPropTypes> = (props) => {
-  const { state } = props;
+  const { state, isProblem } = props;
 
   return (
     <ProblemStepContainer data-testid="problem-step-container">
@@ -20,7 +20,7 @@ const ProblemStep: FC<IPropTypes> = (props) => {
         let endColor = shape.endColor;
         let active = true;
 
-        if (shape.points > state.points) {
+        if (!isProblem || shape.points > state.points) {
           startColor = '#b2bec3';
           endColor = '#b2bec3';
           active = false;

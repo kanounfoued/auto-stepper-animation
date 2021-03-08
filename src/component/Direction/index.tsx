@@ -4,6 +4,8 @@ import STATE_TYPE from '../../declaration_types/State';
 import { DirectionContainer, UpStick, DownStick, CenterStick } from './style';
 import { successStick, problemStick, lostStick } from './mock';
 import ProgressSteps from '../ProgressStep';
+import FailedSteps from '../FailedComponent';
+import ProblemSteps from '../ProblemStep';
 const SUCCESS_STATUS = ['interested', 'win', 'billsAccused', 'billsPaid', 'activated'];
 
 export interface IPropTypes {
@@ -33,10 +35,12 @@ const Direction: FC<IPropTypes> = (props) => {
       <CenterStick isActive={isProblem} style={{ width: '80px' }}>
         <Stick stick={problemStick} active={isProblem} style={{ width: 80 }} />
       </CenterStick>
+      <ProblemSteps isProblem={isProblem} state={state} />
 
       <DownStick isActive={isLost} style={{ width: '100px' }}>
         <Stick stick={lostStick} active={isLost} style={{ width: 100 }} />
       </DownStick>
+      <FailedSteps isLost={isLost} state={state} />
     </DirectionContainer>
   );
 };

@@ -6,16 +6,16 @@ export const successStick: PIECE_COMPONENT_TYPE = {
   startColor: '#0ab7af',
   endColor: '#0ab7af',
   points: 50,
-  delay: 1.2,
+  delay: 1.4,
 };
 
 export const problemStick: PIECE_COMPONENT_TYPE = {
   id: 'stick-5',
   type: 'stick',
-  startColor: '#535353',
-  endColor: '#bababa',
+  startColor: '#bababa',
+  endColor: '#535353',
   points: 50,
-  delay: 1.2,
+  delay: 1.4,
 };
 
 export const lostStick: PIECE_COMPONENT_TYPE = {
@@ -24,5 +24,5 @@ export const lostStick: PIECE_COMPONENT_TYPE = {
   startColor: '#ff0e00',
   endColor: '#ff0e00',
   points: 50,
-  delay: 1.2,
+  delay: 1.4,
 };
