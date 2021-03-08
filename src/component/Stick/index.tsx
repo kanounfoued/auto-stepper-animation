@@ -5,9 +5,7 @@ import { StyledStick, AnimatedStick } from './style';
 export interface IPropTypes {
   stick: STICK_TYPE;
   active: boolean;
-  style?: {
-    width: string | number;
-  };
+  style?: any;
 }
 
 const Stick: FC<IPropTypes> = (props) => {

@@ -3,7 +3,7 @@ import Stick from '../Stick';
 import STATE_TYPE from '../../declaration_types/State';
 import { DirectionContainer, UpStick, DownStick, CenterStick } from './style';
 import { successStick, problemStick, lostStick } from './mock';
-
+import ProgressSteps from '../ProgressStep';
 const SUCCESS_STATUS = ['interested', 'win', 'billsAccused', 'billsPaid', 'activated'];
 
 export interface IPropTypes {
@@ -28,6 +28,7 @@ const Direction: FC<IPropTypes> = (props) => {
       <UpStick isActive={isSuccess} style={{ width: '100px' }}>
         <Stick stick={successStick} active={isSuccess} style={{ width: 100 }} />
       </UpStick>
+      <ProgressSteps isSuccess={isSuccess} state={state} />
 
       <CenterStick isActive={isProblem} style={{ width: '80px' }}>
         <Stick stick={problemStick} active={isProblem} style={{ width: 80 }} />
