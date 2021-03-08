@@ -7,4 +7,5 @@ export default interface PIECE_COMPONENT_TYPE {
   points: number;
   title?: string;
   icon?: string;
+  style?: any;
 }
