@@ -18,6 +18,6 @@ export const AnimatedStick = styled.div`
   background-image: linear-gradient(90deg, ${(props) => props.startColor} 24%, ${(props) => props.endColor} 72%);
   transform: ${(props) => (props.isActive ? 'scaleX(1)' : 'scaleX(0)')};
   transform-origin: left center;
-  transition: transform 200ms ease ${(props) => props.delay}s;
+  transition: ${(props) => (props.isActive ? `transform 200ms linear ${props.delay}s` : 'none')};
   border-radius: 5px;
 `;

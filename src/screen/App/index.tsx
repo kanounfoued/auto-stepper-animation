@@ -10,8 +10,8 @@ interface IPropTypes {}
 const App: FC<IPropTypes> = () => {
   const [state, setState] = useState<STATE_TYPE>({ status: 'lost', points: 100 });
 
-  const updateState = (state: STATE_TYPE) => {
-    setState(state);
+  const updateState = (e: any) => {
+    setState(JSON.parse(e.target.value));
   };
 
   return (
@@ -20,6 +20,13 @@ const App: FC<IPropTypes> = () => {
         <InitialSteps state={state} />
         <Direction state={state} />
       </ViewContainer>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <select value={JSON.stringify(state)} onChange={updateState}>
+          {states.map((stat) => {
+            return <option value={JSON.stringify(stat)}>{stat.status}</option>;
+          })}
+        </select>
+      </div>
     </AppContainer>
   );
 };
