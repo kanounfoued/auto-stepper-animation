@@ -6,7 +6,7 @@ export interface IPropTypes {
   stick: STICK_TYPE;
   active: boolean;
   style?: {
-    width: string;
+    width: string | number;
   };
 }
 
@@ -22,6 +22,7 @@ const Stick: FC<IPropTypes> = (props) => {
   return (
     <StyledStick style={style}>
       <AnimatedStick
+        id={stick.id}
         startColor={stick.startColor}
         endColor={stick.endColor}
         isActive={isActive}
